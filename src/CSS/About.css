@@ -1,0 +1,146 @@
+:root{ /* CSS Variables */
+  --bg:#ffffff;
+  --ink:#1f2937;           /* text */
+  --muted:#6b7280;         /* secondary text */
+  --brand:#0b74c4;         /* accent */
+  --soft:#f5f7fb;          /* card bg */
+  --ring:rgba(11,116,196,.15);
+  --radius:16px;
+  --shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+/* Section shell */
+.about-section{
+  max-width: 1050px;
+  margin: 72px auto 56px;      /* clears nav */
+  padding: 32px 28px;
+  background: var(--bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+}
+
+/* Headings */
+.about-section h1{
+  font-size: clamp(1.75rem, 2.3vw, 2.25rem);
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: .2px;
+  margin: 0 0 18px;
+  color: var(--brand);
+}
+
+.about-subtitle{
+  margin: 28px 0 14px;
+  font-size: clamp(1.25rem, 1.7vw, 1.5rem);
+  font-weight: 800;
+  color: var(--brand);
+}
+
+/* Intro paragraphs -> soft “cards” */
+.about-intro{
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--ink);
+  background: var(--soft);
+  border-radius: 14px;
+  padding: 18px 18px;
+  margin: 14px 0;
+  box-shadow: 0 1px 0 rgba(0,0,0,.02);
+  border: 1px solid rgba(15, 23, 42, .05);
+  position: relative;
+}
+.about-intro::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto 0;
+  height:4px;
+  background: linear-gradient(90deg, var(--brand), #60a5fa);
+  border-radius: 14px 14px 0 0;
+  opacity:.15;
+}
+
+/* Inline highlights */
+.hl,
+.about-intro strong{
+  color: var(--brand);
+  font-weight: 700;
+}
+
+/* Skills grid */
+.skills-list{
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+/* Individual skill card */
+.skills-list li{
+  background: #fafbff;
+  border: 1px solid var(--ring);
+  border-radius: 14px;
+  padding: 14px 16px;
+  line-height: 1.6;
+  box-shadow: 0 2px 10px rgba(0,0,0,.04);
+}
+
+.skills-list strong{
+  display:block;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+
+/* Tech badges */
+.tech-badges{
+  margin: 22px 0 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.tech-badge{
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #eef6ff;
+  border: 1px solid var(--ring);
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+/* Resume block */
+.resume-block{
+  margin-top: 24px;
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(15,23,42,.15);
+}
+.resume-block h2{
+  margin: 0 0 6px;
+  color: var(--brand);
+}
+.resume-link{
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(11,116,196,.25);
+  transition: transform .08s ease, box-shadow .2s ease, opacity .15s ease;
+}
+/* Hover/active states */
+.resume-link:hover{ transform: translateY(-1px); box-shadow: 0 10px 22px rgba(3, 135, 236, 0.418);}
+.resume-link:active{ transform: translateY(0); opacity:.9; }
+
+/* Responsive tweaks */
+@media (min-width: 640px){
+  .about-section{ padding: 36px 40px; }
+  .skills-list{ grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 960px){
+  .skills-list{ grid-template-columns: 1fr 1fr 1fr; }
+}

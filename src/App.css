@@ -1,0 +1,21 @@
+#root {
+  margin: 0;
+  padding: 0;               /* remove extra space */
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.App-container {
+  background-image: url("../src/images/Background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;            /* centers content */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

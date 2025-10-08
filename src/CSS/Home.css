@@ -1,0 +1,64 @@
+.home h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  margin-bottom: 1rem;
+}
+
+.home p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: #f1f1f1;
+}
+
+.project-showcase {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: #fff;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.project-list li {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.project-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+  background: rgba(0,0,0,0.4);
+  padding: 1rem;
+  border-radius: 8px;
+}
